@@ -1,0 +1,32 @@
+.table-edit-dialog {
+  &__fields-list {
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+  }
+
+  &__field-label {
+    display: inline-block;
+    width: 125px;
+    margin: 5px;
+  }
+
+  &__field {
+    &--disabled {
+      background-color: #d6dce6;
+    }
+  }
+
+  &__errors-wrapper {
+    color: #FF0000;
+    font-weight: bold;
+  }
+
+  &__buttons-wrapper {
+    margin-top: 15px;
+  }
+
+  &__cancel-btn {
+    margin-right: 15px;
+  }
+}

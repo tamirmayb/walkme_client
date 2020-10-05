@@ -1,0 +1,60 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://rsms.me/inter/inter.css');
+@import './styles/_colors';
+
+body {
+  margin: 0;
+  font-size: 12px;
+  font-family: Inter;
+}
+
+
+// ---- MATERIAL OVERRIDES ----
+
+.mat-form-field-underline {
+  display: none;
+}
+
+// BUTTONS
+.mat-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-flat-button.mat-primary,
+.mat-mini-fab.mat-primary,
+.mat-raised-button.mat-primary {
+  background-color: #0838ff;
+  color: #FFFFFF;
+  font-weight: bold;
+  height: 40px;
+}
+
+
+
+
+// CHIPS (tags)
+.mat-basic-chip {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.67;
+  color: #d30d0d;
+  background-color: #ffc0cb;
+  padding: 2px 8px;
+  border-radius: 15px;
+  margin-right: 5px;
+}
+
+// SELECT
+.mat-select-panel {
+  //background: red;
+}
+
+.mat-select {
+  background-color: $main-gray-background;
+  border-radius: 5px;
+  line-height: 32px;
+  padding-left: 8px;
+}
+
+.mat-select-value-text {
+  color: $main-border-color;
+  font-weight: bold;
+}

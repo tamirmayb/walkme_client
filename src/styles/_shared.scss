@@ -1,0 +1,39 @@
+$common-border: solid 1px #c9ced6;
+
+.dialog-top-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.flex-spacer {
+  flex: 1;
+}
+
+//FIELDS
+.textField {
+  font-size: 14px;
+  padding: 10.5px 12px;
+  color: #4e5d78;
+  border: solid 1px #c9ced6;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="text"] {
+  @extend .textField;
+  //padding: 10.5px 12px 10.5px 45px;
+}
+
+textarea {
+  @extend .textField;
+}
+
+.top-field-label {
+  display: inline-block;
+  color: #4e5d78;
+  line-height: 20px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+//END OF FIELDS

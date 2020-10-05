@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app-component {
+  &__main-table-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__add-button-wrapper {
+    text-align: center;
+  }
+}
+
+.mat-cell,
+.mat-header-cell {
+  padding: 24px;
+}
+
+.table-header {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0a1f44;
+}
+
+.add-button{
+  margin-top: 10px;
+}
+
+.title{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,48 @@
+<div class="app-component">
+  <div class="app-component__main-table-wrapper">
+    <div>
+
+      <div class="title">
+        <h2>CAMPAIGNS</h2>
+      </div>
+
+      <table mat-table [dataSource]="mainData" class="mat-elevation-z18" #campaignsTable>
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> Id </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="data">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> Data </th>
+          <td mat-cell *matCellDef="let element"> {{element.data}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="maxCountPerUser">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> Max Count Per User </th>
+          <td mat-cell *matCellDef="let element"> {{element.cap.maxCountPerUser}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="maxCount">
+          <th mat-header-cell *matHeaderCellDef class="table-header"> Max Count </th>
+          <td mat-cell *matCellDef="let element"> {{element.cap.maxCount}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="mainDataTableHeaders"></tr>
+        <tr mat-row *matRowDef="let row; columns: mainDataTableHeaders;" (click)="showTableEditDialog(row)"></tr>
+      </table>
+
+      <button mat-button color="primary" class="add-button" (click)="addRowItem()">+ Add Item</button>
+    </div>
+
+  </div>
+
+  <router-outlet></router-outlet>
+
+</div>
+

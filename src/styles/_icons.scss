@@ -1,0 +1,87 @@
+.icon16 {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.icon18 {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.icon24 {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.icon-add-comment {
+  @extend  .icon16;
+  background-image: url('/assets/images/add-comment.svg');
+}
+
+.icon-left-arrow {
+  @extend  .icon18;
+  background-image: url('/assets/images/arrow-back.svg');
+}
+
+.icon-ninja-face {
+  background: #CACACA url('/assets/images/ninja-logo.png') center center no-repeat;
+  background-size: contain;
+}
+
+.icon-ninja-face-gray {
+  @extend .icon-ninja-face;
+  filter: grayscale(100%);
+}
+
+.icon-close-dialog {
+  @extend .icon24;
+  background-image: url('/assets/images/x-close.svg');
+  background-position: -1px -3px;
+}
+
+.icon-trash-button {
+  @extend .icon24;
+  background-image: url('/assets/images/trash.svg');
+  background-position: -1px -1px;
+}
+
+
+// FILTER Icons
+.icon-inbox-button {
+  @extend .icon24;
+  background-image: url('/assets/images/inbox.svg');
+}
+
+.icon-submitted-button {
+  @extend .icon24;
+  background-image: url('/assets/images/submitted.svg');
+}
+
+.icon-progress-button {
+  @extend .icon24;
+  background-image: url('/assets/images/inprogress-alt.svg');
+}
+
+.icon-offered-button {
+  @extend .icon24;
+  background-image: url('/assets/images/offer.svg');
+}
+
+.icon-rejected-button {
+  @extend .icon24;
+  background-image: url('/assets/images/reject.svg');
+}
+
+.icon-total-button {
+  @extend .icon24;
+  background-image: url('/assets/images/total.svg');
+}

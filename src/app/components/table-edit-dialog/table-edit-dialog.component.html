@@ -1,0 +1,45 @@
+<div class="table-edit-dialog">
+  <h2>{{dialogTitle}}:</h2>
+
+  <section>
+    <ul class="table-edit-dialog__fields-list">
+      <li>
+        <label class="table-edit-dialog__field-label" for="name">Name:</label>
+        <input
+          id="name"
+          type="text"
+          class="table-edit-dialog__field"
+          [ngClass]="{'table-edit-dialog__field--disabled': !isNewRow}"
+          [(ngModel)]="cloneRowData.name"
+          [readOnly]="!isNewRow" />
+      </li>
+      <li>
+        <label class="table-edit-dialog__field-label" for="full-name">Data:</label>
+        <input
+          id="full-name"
+          type="text"
+          class="table-edit-dialog__field"
+          [ngClass]="{'table-edit-dialog__field--disabled': !isNewRow}"
+          [(ngModel)]="cloneRowData.data"
+          [readOnly]="!isNewRow" />
+      </li>
+      <li>
+        <label class="table-edit-dialog__field-label" for="max-count-per-user">Max Count Per User:</label>
+        <input id="max-count-per-user" type="number" [(ngModel)]="cloneRowData.cap.maxCountPerUser" />
+      </li>
+      <li>
+        <label class="table-edit-dialog__field-label" for="max-count">Max Count:</label>
+        <input id="max-count" type="number" [(ngModel)]="cloneRowData.cap.maxCount"  />
+      </li>
+    </ul>
+  </section>
+
+  <section *ngIf="isError" class="table-edit-dialog__errors-wrapper">
+    I sense a disturbance in the force...
+  </section>
+
+  <section class="table-edit-dialog__buttons-wrapper">
+    <button mat-button color="primary" class="table-edit-dialog__cancel-btn" (click)="closeDialog()">Cancel</button>
+    <button mat-button color="primary" (click)="saveChanges()">Save</button>
+  </section>
+</div>
